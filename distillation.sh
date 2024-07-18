@@ -1,0 +1,20 @@
+python3 main_distill.py \
+    --data /root/code/data/imagenet_100 \
+    --data_type imagenet \
+    --arch resnet18 \
+    --workers 32 \
+    --epochs 200 \
+    --start-epoch 0 \
+    --batch-size 64 \
+    --learning-rate 0.03 \
+    --momentum 0.9 \
+    --weight-decay 1e-4 \
+    --print-freq 10 \
+    --save-freq 10 \
+    --log-freq 100 \
+    --gpu 0 \
+    --teacher /root/code/ssl_dist/teacher/byol/BYOL_official_pretrained_resnet50.tar \
+    --teacher_method byol \
+    --t_arch resnet50 \
+    --pred_h_dim 512 \
+    --feature_reduction \

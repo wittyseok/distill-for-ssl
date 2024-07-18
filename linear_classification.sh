@@ -1,0 +1,18 @@
+python3 main_lincls.py \
+    --data /root/code/data/imagenet_100 \
+    --data_type imagenet \
+    --arch resnet18 \
+    --workers 32 \
+    --epochs 100 \
+    --start-epoch 0 \
+    --batch-size 64 \
+    --learning-rate 30 \
+    --momentum 0.9 \
+    --weight-decay 0 \
+    --print-freq 10 \
+    --save-freq 10 \
+    --log-freq 100 \
+    --gpu 0 \
+    --pretrained /root/code/ssl_dist/save/distill/models/imagenet_resnet18_lr_0.03_bsz64_pred_h_dim_512_t_byol_ftr_red/checkpoint_0200epoch.pth.tar \
+    --pretrained_method byol \
+    --distilled \
